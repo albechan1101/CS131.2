@@ -1,0 +1,44 @@
+1a. We are trying to find all regular files in the /etc directory and its subdirectories. Afterwards, it saves the list of found files into a file called one.txt and any error messages are saved in a file called two.txt
+1b. In one.txt, every file that is found began with /etc which means this file contains all the files that are found in the /etc directory. In two.txt, it contains files which are permission denied.
+
+2.
+1) March, 2006 with 15 channels
+2) July, 2014 with 13 channels
+3) August, 2014 with 12 channels
+The command I used to find this is: cut -d ',' -f20,21 Global\ YouTube\ Statistics.csv | sort | uniq -c | sort -rn | head -n 3
+Explanation for the command: cut -d is used to extract specific colums from the CSV file. ',' is the seperator of the columns. f20,21 is the columns of the month and year of the top 3 YouTube channels created. Global\ YouTube\ Statistics.csv is the CSV file. sort is used to extract the [month, year] combinations. uniq -c is used to remove duplicate lines and prefix lines by the  number of occurences of each line. sort -rn sorts the output in reverse order and sorts the output numerically (descending order). head -n 3 is used to retrieve the first 3 lines from the sorted output. 
+
+3.
+    PID TTY          TIME CMD
+2576705 ?        00:00:02 systemd
+2576707 ?        00:00:00 (sd-pam)
+2576713 ?        00:00:00 sshd
+2576716 pts/9    00:00:00 bash
+2593506 pts/9    00:00:00 ps
+
+4.
+b)    PID TTY          TIME CMD
+3336400 ?        00:00:00 systemd
+3336402 ?        00:00:00 (sd-pam)
+3336408 ?        00:00:00 sshd
+3336410 pts/2    00:00:00 bash
+3337146 ?        00:00:00 sshd
+3337148 pts/4    00:00:00 bash
+3337433 pts/2    00:00:00 vim
+3339837 pts/4    00:00:00 ps
+I noticed there are two sshd and bash along with the new addition of vim which did not appear in question 3. The PID and TTY is also different than that of question 3. The process ID for the vim is 3337433.
+c)     PID TTY          TIME CMD
+3336400 ?        00:00:00 systemd
+3336402 ?        00:00:00 (sd-pam)
+3336408 ?        00:00:00 sshd
+3336410 pts/2    00:00:00 bash
+3337146 ?        00:00:00 sshd
+3337148 pts/4    00:00:00 bash
+3341252 pts/4    00:00:00 ps
+I noticed that there is no vim in this one compared to the one in question 4b. This happended because I quit out of VI on the first terminal. Other than that, the PID for ps is different from that of 4b. This happended because the processes were executed at different times.
+
+5. 
+The process id for the init process is 1. The command I used to do this is ps -p 1
+
+6. 
+ps aux is used for obtaining information about all running processes. It can provide a comprehensive list of processes in a user-friendly format including PID, CPU, memory VSZ, RSS, TTY, STAT, START, TIME, and COMMAND. 
