@@ -1,0 +1,46 @@
+  591  grep "United States" Global\ YouTube\ Statistics.csv | sort -t ',' k 7
+  592  grep "United States" Global\ YouTube\ Statistics.csv | sort -t ',' k 7 -n -r
+  598  sort -t ',' -k 15nr Global\ YouTube\ Statistics.csv > sorted_monthly_earnings.csv
+  599  cat sorted_monthly_earnings.csv 
+  600  sort -t ',' -k 15nr Global\ YouTube\ Statistics.csv > sorted_monthly_earnings.txt
+  601  cat sorted_monthly_earnings.txt
+  602  cat sorted_monthly_earnings.txt | grep 'United States' | head -n 1
+  603  cat Global\ YouTube\ Statistics.csv
+  604  cat sorted_monthly_earnings.txt | grep 'United States' | head -n 1
+  605  cat sorted_monthly_earnings.txt | grep 'United Kingdom' | head -n 1
+  607  cat sorted_monthly_earnings.txt | grep 'India' | head -n 1
+  608  clear
+  609  mkdir worksheet3
+  610  cd worksheet
+  611  cd worksheet3
+  612  vi w23.txt
+  613  cd worksheet3
+  614  cd ..
+  617  cat Global\ YouTube\ Statistics.csv
+  618  clear
+  619  sort -t ',' -k 3nr Global\ YouTube\ Statistics.csv > sorted_subscribers.csv
+  620  ls
+  621  grep 'Sports' sorted_subscribers.csv | head -n 1
+  622  grep 'Education' sorted_subscribers.csv | head -n 1
+  623  grep 'Entertainment' sorted_subscribers.csv | head -n 1
+  624  cd worksheet3
+  625  vi w23.txt 
+  626  grep 'Sports' sorted_subscribers_edited.csv | head -n 1 | awk -F ',' '{print $3, $2}'
+  627  ls
+  628  grep 'Sports' sorted_subscribers.csv | head -n 1 | awk -F ',' '{print $3, $2}'
+  629  cd worksheet3
+  630  vi w23.txt 
+  631  :x
+  632  cd worksheet3
+  633  vi w23.txt 
+  634  cd ..
+  635  grep 'Education' sorted_subscribers.csv  | head -n 1
+  641  cat sorted_subscribers.csv
+  642  grep -i ',Entertainment,' sorted_subscribers.csv | head -n 1
+  643  grep -i ',Education,' sorted_subscribers.csv | head -n 1
+  644  cd worksheet3
+  645  vi
+  646  vi w23.txt 
+  647  history > cmds.log
+  648  vi cmds.log
+  649  history > cmds.log
